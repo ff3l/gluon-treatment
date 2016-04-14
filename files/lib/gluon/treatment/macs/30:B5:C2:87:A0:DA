@@ -1,0 +1,6 @@
+#!/bin/sh
+uci set gluon-node-info.@location[0]='location'
+uci set gluon-node-info.@location[0].share_location='1'
+uci set gluon-node-info.@location[0].latitude='47.553143'
+uci set gluon-node-info.@location[0].longitude='7.947924'
+uci commit
