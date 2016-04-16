@@ -3,7 +3,7 @@
 for mac in $(ls /lib/gluon/treatment/macs); do
 	yes=$(ifconfig br-client | grep $mac|wc -l)
 	if [ $yes != 0 ]; then
-		/lib/gluon/treatment/macs/$mac
+		/bin/sh /lib/gluon/treatment/macs/$mac
 	fi
         rm /lib/gluon/treatment/macs/$mac
 done
