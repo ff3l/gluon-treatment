@@ -3,7 +3,7 @@
 for mac in $(ls /lib/gluon/treatment/macs); do
 	yes=$(ifconfig br-client | grep $mac|wc -l)
 	if [ $yes != 0 ]; then
-		if [ -x "/lib/gluon/treatment/macs/$mac"]
+		if [ ! -x "/lib/gluon/treatment/macs/$mac"]
 		then
 			chmod +x "/lib/gluon/treatment/macs/$mac"
 		fi
